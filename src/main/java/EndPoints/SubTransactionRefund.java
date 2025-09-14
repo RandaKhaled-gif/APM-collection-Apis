@@ -11,9 +11,12 @@ public class SubTransactionRefund {
         private String subTransactionReferenceNumber ;
         @JsonProperty("amount")
         private double amount ;
-        public SubTransactionRefund (String reference, double amount) {
+    @JsonProperty("referenceNumber")
+    private String referenceNumber ;
+        public SubTransactionRefund (String reference, double amount, String referenceNumber) {
             this.subTransactionReferenceNumber = reference;
             this.amount = amount;
+            this.referenceNumber = referenceNumber;
         }
 
         public String getSubTransactionReferenceNumber() {
@@ -30,6 +33,14 @@ public class SubTransactionRefund {
 
         public void setAmount(double amount) {
             this.amount = amount;
+        }
+
+        public String getReferenceNumber() {
+        return referenceNumber;
+    }
+
+        public void setReferenceNumber(String referenceNumber) {
+        this.referenceNumber = referenceNumber;
         }
 
     }

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 public class SettlementRefundApi {
 
-    public SettlementRefund setRefund(String referenceNumber) {
-        SubTransactionRefund sub = new SubTransactionRefund(referenceNumber, Constant.Amount);
+    public SettlementRefund setRefund(String referenceNumber , String newReferenceNumber) {
+        SubTransactionRefund sub = new SubTransactionRefund(referenceNumber, Constant.Amount , newReferenceNumber);
 
         List<SubTransactionRefund> subList = new ArrayList<>();
         subList.add(sub);
